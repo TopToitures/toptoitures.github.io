@@ -1,8 +1,70 @@
+<!DOCTYPE html />
 <html>
 	<head>
+		<meta charset="utf-8" />
 		<title>Top Toitures Dunkerque</title>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="modernizr.js"></script>
+		<script type="text/javascript" src="pace.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=fr"></script>
+		<script type="text/javascript">
+		    $(document).ready(function(){
+                var position = new google.maps.LatLng(51.021798,2.375981);
+                var mapOptions = {
+                    zoom: 16,
+                    center: position,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };                
+                var map = new google.maps.Map(document.getElementById('card-left'), mapOptions); 
+                var marker = new google.maps.Marker({
+                    position: position,
+                    animation: google.maps.Animation.DROP,
+                    map: map,
+                    icon: 'pin.png',
+                });
+            });
+		</script>
+		<link rel="stylesheet" href="pace.css" type="text/css" />
+		<link rel="stylesheet" href="style.css" type="text/css">
 	</head>
 	<body>
-		Work In Progress
+	    <div id="top"></div>
+	    <div id="bottom"></div>
+	    <div id="card">
+	        <div id="card-left">
+	            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.fr/maps?q=Top+Toitures+Dunkerque&fb=1&gl=fr&hq=top+toitures&hnear=0x47dc8b6dd9ff20b9:0x40af13e81646da0,Dunkerque&cid=0,0,12426024457082805440&t=m&z=16"></iframe>
+	        </div>
+	        <div id="card-middle">
+	        </div>
+	        <div id="card-right">
+	            <h1>Top Toitures Dunkerque</h1>
+	            <p id="home">14 Rue des Forts</p>
+	            <p>59210 Coudekerque-Branche, France</p>
+                <p id="phone">+33 (0)3 28 21 28 01</p>
+                <p id="fax">+33 (0)3 28 21 95 50</p>
+                <p id="mail">toptoitures@orange.fr</p>
+	        </div>
+	    </div>  
+	    <footer>
+	        <small>&copy;&nbsp;Top Toitures Dunkerque&nbsp;&nbsp;&nbsp;2013 - 2014</small>
+	    </footer>
+	    <script type="text/javascript">
+            if(window.location.indexOf("toptoitures.fr") >= 0){
+                (function(i,s,o,g,r,a,m){
+                    i['GoogleAnalyticsObject']=r;
+                    i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+                        a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];
+                        a.async=1;
+                        a.src=g;
+                        m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                
+                ga('create', 'UA-44424191-1', 'toptoitures.fr');            
+    //            ga('send', 'pageview');
+            }
+            
+        </script>      
 	</body>
 </html>
