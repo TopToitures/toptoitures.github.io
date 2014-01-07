@@ -1,0 +1,176 @@
+<!DOCTYPE html />
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nous contacter</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<link rel="icon" href="favicon.ico" />
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+ 		<script src="js/plugins.js"></script>
+ 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfdaVI34NllpwHhHmTnECFrixGWzj1kmQ&sensor=true"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+		<div class="wrap">
+			<div class="wrapper">
+					<div class="header">
+					<div class="logo">
+						<h1><a href="index.html"><img src="img/tlogo2.png" alt=""></a></h1>
+					</div>
+						<!--<div class="search" style="margin-top: 0% !important; width: 18% !important;cursor: pointer; padding: 2px;" onclick="javascript:window.open('./partners.html', '_self');">-->
+					<div class="search" style="margin-top: 0% !important; width: 18% !important;cursor: pointer; padding: 2px;" onclick="javascript:window.open('./gallery.html', '_self');">
+			    		<div style="background-color: #211F1C; border: 2px solid #FFFFFF; color: #C9C9C9;">
+			    		    <div class="currentPartner" style="height: 100px; background-position: center; background-repeat: no-repeat;"></div>
+			    		    <!--<p style="line-height: 16px; text-align: center;">Ils nous font confiance</p>-->
+			    		    <!--<p style="line-height: 16px; text-align: center;">Nos réalisations</p>-->
+			    		    <script type="text/javascript" src="./js/partners.js"></script>
+			    		</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="header_menu">
+				 	<ul class="nav">
+				        <li><a href="index.html"><img src="img/home_rouge.png" alt="Accueil"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px; ">Accueil</p></a></li>
+				        <li><a href="services.html"><img src="img/service_rouge.png" alt="Nos métiers"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px;">Nos métiers</p></a></li>
+				        <li><a href="gallery.html"><img src="img/gallery_rouge.png" alt="Nos réalisations"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px;">Nos réalisations</p></a></li>	        
+				        <!--<li><a href="downloads.html"><img src="img/about_rouge.png" alt="A télécharger"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px;">A télécharger</p></a></li>-->
+				        <li><a href="contact.html"><img src="img/contact_rouge.png" alt="Nous contacter"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px;">Nous contacter</p></a></li>
+				        <div class="clear"></div>
+				     </ul>
+				</div>
+			</div>
+		</div>
+		<div class="content_bg">
+            <div class="wrap">
+                <div class="wrapper">
+                    <div class="main">
+		                <div class="section group">				
+				            <div class="col span_1_of_2">
+      			                <div class="company_address">
+            				     	<h2 class="style">Adresse </h2>
+                                    <p>Top Toitures Dunkerque</p>
+            						<p>14 rue des Forts</p>
+            						<p>59210 Coudekerque-Branche</p>
+            						<p>France</p>
+            				   		<p>Téléphone: +33 (0)3 28 21 28 01</p>
+            				   		<p>Fax: +33 (0)3 28 21 95 50</p>
+            				 	 	<p>Email: <span><a href="mailto:&#116;&#111;&#112;&#045;&#116;&#111;&#105;&#116;&#117;&#114;&#101;&#115;&#064;&#111;&#114;&#097;&#110;&#103;&#101;&#046;&#102;&#114;">&#116;&#111;&#112;&#045;&#116;&#111;&#105;&#116;&#117;&#114;&#101;&#115;&#064;&#111;&#114;&#097;&#110;&#103;&#101;&#046;&#102;&#114;</a></span></p>
+            				   </div>
+					            <div class="contact_info">
+			    	 	            <h2 class="style">Trouvez-nous</h2>
+		    	 		            <div class="map">
+				   			            <div id="mapContainer" style="width: 100%; height: 200px">
+                                        </div>
+			   		                </div>      
+				   		            <script type="text/javascript">
+                        	            $(document).ready(function() {
+                                            var mapOptions = {
+                              	                center: new google.maps.LatLng(51.021938, 2.3758),
+                                  	            zoom: 16
+                                            };
+                                	        var map = new google.maps.Map(document.getElementById("mapContainer"), mapOptions);
+                                        	var marker = new google.maps.Marker({
+                              		            position: map.getCenter(),
+                              		            map: map,
+                              		            title: 'Top Toitures'
+                          		            });
+                        	            });
+                                    </script>
+  				                </div>
+				                <div class="clear"></div>
+				            </div>				
+				            <div class="col span_2_of_4">
+				                <div class="contact-form">
+				  	                <h2 class="style">Contactez-nous</h2>
+					                <div>
+					    	            <div>
+						    	            <span><label>Nom, prénom et société</label></span>
+						    	            <span><input name="userName" id="userName" type="text" class="textbox" placeholder="Votre mom, prénom et société"></span>
+            						    </div>
+            						    <div>
+            						    	<span><label>E-MAIL</label></span>
+            						    	<span><input name="userEmail" id="userEmail" type="email" class="textbox" placeholder="Votre email"></span>
+            						    </div>
+            						    <div>
+            						    	<span><label>SUJET</label></span>
+            						    	<span><textarea name="userMsg" id="userMsg"></textarea></span>
+            						    </div>
+						                <div>
+						   		            <span><input type="submit" id="sendMail" value="Envoyer"></span>
+						                </div>
+						                <script type="text/javascript">
+						                    $(document).ready(function() {
+						                        $("#sendMail").click(function() {
+						                            var name = $.trim($("#userName").val()), 
+				                                        email = $.trim($("#userEmail").val()), 
+				                                        message = $.trim($("#userMsg").val());
+			                                        if (name !== "" && email !== "" && message !== "") {
+			                                            //var url = "https://nodetest-c9-thomassloboda.c9.io/toptoitures/" + encodeURIComponent(name) + "/" + encodeURIComponent(email) + "/" + encodeURIComponent(message);
+			                                            var url = "http://sloboda.fr/mail/send.aspx?n=" + encodeURIComponent(name) + "&e=" + encodeURIComponent(email) + "&m=" + encodeURIComponent(message);
+			                                            $.ajax({
+			                                                type: "GET",
+			                                                url: url,
+			                                                contentType: "application/json",
+			                                                success: function() {
+			                                                    window.location = window.location;
+			                                                }
+			                                            })
+			                                        }
+						                           
+						                        });
+						                    });
+						                </script>
+					                </div>
+                                </div>
+  				            </div>		
+  			                <div class="clear"></div>
+		                </div>
+	                </div>
+                </div>
+            </div>
+        </div>
+		<div class="footer_bg">
+			<div class="wrap">
+				<div class="wrapper">
+					<div class="footer">
+						<div class="copy">
+							<p class="w3_link">© Top Toitures Dunkerque | 2013 - 2014</p>
+						</div>
+						<div class="social-icons">
+					   		  	
+					   	 </div>		
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            /*(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');*/
+        </script>
+    </body>
+</html>

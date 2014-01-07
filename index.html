@@ -1,71 +1,144 @@
 <!DOCTYPE html />
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Top Toitures Dunkerque</title>
-		<script type="text/javascript" src="jquery.min.js"></script>
-		<script type="text/javascript" src="modernizr.js"></script>
-		<script type="text/javascript" src="pace.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=fr"></script>
-		<script type="text/javascript">
-		    $(document).ready(function(){
-                var position = new google.maps.LatLng(51.021798,2.375981);
-                var mapOptions = {
-                    zoom: 16,
-                    center: position,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };                
-                var map = new google.maps.Map(document.getElementById('card-left'), mapOptions); 
-                var marker = new google.maps.Marker({
-                    position: position,
-                    animation: google.maps.Animation.DROP,
-                    map: map,
-                    icon: 'pin.png',
-                });
-            });
-		</script>
-		<link href='http://fonts.googleapis.com/css?family=Oxygen:700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="pace.css" type="text/css" />
-		<link rel="stylesheet" href="style.css" type="text/css">
-	</head>
-	<body>
-	    <div id="top"></div>
-	    <div id="bottom"></div>
-	    <div id="card">
-	        <div id="card-left">
-	            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.fr/maps?q=Top+Toitures+Dunkerque&fb=1&gl=fr&hq=top+toitures&hnear=0x47dc8b6dd9ff20b9:0x40af13e81646da0,Dunkerque&cid=0,0,12426024457082805440&t=m&z=16"></iframe>
-	        </div>
-	        <div id="card-middle">
-	        </div>
-	        <div id="card-right">
-	            <h1>Top Toitures Dunkerque</h1>
-	            <p id="home">14 Rue des Forts</p>
-	            <p>59210 Coudekerque-Branche, France</p>
-                <p id="phone">+33 (0)3 28 21 28 01</p>
-                <p id="fax">+33 (0)3 28 21 95 50</p>
-                <p id="mail">top-toitures@orange.fr</p>
-	        </div>
-	    </div>  
-	    <footer>
-	        <small>&copy;&nbsp;Top Toitures Dunkerque&nbsp;&nbsp;&nbsp;2013 - 2014</small>
-	    </footer>
-	    <script type="text/javascript">
-            if(window.location.href.indexOf("toptoitures.fr") >= 0){
-                (function(i,s,o,g,r,a,m){
-                    i['GoogleAnalyticsObject']=r;
-                    i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
-                        a=s.createElement(o),
-                        m=s.getElementsByTagName(o)[0];
-                        a.async=1;
-                        a.src=g;
-                        m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                
-                ga('create', 'UA-44424191-1', 'toptoitures.fr');            
-                ga('send', 'pageview');
-            }
-            
-        </script>      
-	</body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Accueil</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<link rel="icon" href="favicon.ico" />
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+ 		<script src="js/plugins.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+		<div class="wrap">
+			<div class="wrapper">
+					<div class="header">
+					<div class="logo">
+						<h1><a href="index.html"><img src="img/tlogo2.png" alt=""></a></h1>
+					</div>
+					<!--<div class="search" style="margin-top: 0% !important; width: 18% !important;cursor: pointer; padding: 2px;" onclick="javascript:window.open('./partners.html', '_self');">-->
+					<div class="search" style="margin-top: 0% !important; width: 18% !important;cursor: pointer; padding: 2px;" onclick="javascript:window.open('./gallery.html', '_self');">
+			    		<div style="background-color: #211F1C; border: 2px solid #FFFFFF; color: #C9C9C9;">
+			    		    <div class="currentPartner" style="height: 100px; background-position: center; background-repeat: no-repeat;"></div>
+			    		    <!--<p style="line-height: 16px; text-align: center;">Ils nous font confiance</p>-->
+			    		    <!--<p style="line-height: 16px; text-align: center;">Nos réalisations</p>-->
+			    		    <script type="text/javascript" src="./js/partners.js"></script>
+			    		</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="header_menu">
+				 	<ul class="nav">
+				        <li><a href="index.html"><img src="img/home_rouge.png" alt="Accueil"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px; ">Accueil</p></a></li>
+				        <li><a href="services.html"><img src="img/service_rouge.png" alt="Nos métiers"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px;">Nos métiers</p></a></li>
+				        <li><a href="gallery.html"><img src="img/gallery_rouge.png" alt="Nos réalisations"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px;">Nos réalisations</p></a></li>	        
+				        <!--<li><a href="downloads.html"><img src="img/about_rouge.png" alt="A télécharger"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px;">A télécharger</p></a></li>-->
+				        <li><a href="contact.html"><img src="img/contact_rouge.png" alt="Nous contacter"><p class="menu-title" style="color: white; margin: 0; padding: 0; line-height: 20px;">Nous contacter</p></a></li>
+				        <div class="clear"></div>
+				     </ul>
+				</div>
+			</div>
+		</div>
+		<div class="content_bg">
+			<div class="wrap">
+				<div class="wrapper">
+					<div class="main">
+					 	<h2 class="style">A propos de Top Toitures Dunkerque</h2>
+					    <!--<div class="about">
+                            <div class="cont-grid-img img_style">
+	                            <a href="javascript:void(0);"><img src="img/car.png" alt=""></a>
+                            </div>
+                            <div class="cont-grid">
+                                <div class="abt-para">
+                        			<p class="para">Composée d’une dizaine de professionnels, jeunes qualifiés ou expérimentés, TOP TOITURES s’adresse aux <span class="bold">particuliers</span> comme aux <span class="bold">collectivités et bailleurs</span> pour des travaux de <span class="bold">réhabilitation</span> et de <span class="bold">rénovation</span>.</p>
+                        			<p class="para">D’une tuile à remettre en place, à la réfection complète d’une église, la même attention est apportée afin de vous <span class="bold">satisfaire</span>.</p>
+                        		    <p class="para">Une entreprise à dimensions <span class="bold">humaines</span> qui réalise tous vos souhaits.</p>
+    							    <p class="para">Nos compagnons exercent leur métier dans les <span class="bold">règles de l’art</span>. Ils sont formés aux dernières technologies et emploient toujours le matériel le plus adapté, afin de répondre au mieux à tous vos besoins !</p>
+	    						</div>
+		                        <div class="clear"></div>
+		                    </div>
+		                    <div class="clear"></div>
+		                    <div class="about-p">
+			                    <p class="para">Nous intervenons prioritairement dans un rayon de 30 km autour de la <span class="bold">Communauté Urbaine de DUNKERQUE</span>.</p>
+	    						<p class="para"><span class="bold">Réactivité</span> et <span class="bold">professionnalisme</span>, <span class="bold">garantie décennale</span> sur tous les travaux, et label <span class="bold">Qualibat</span> sont les garants de votre entière satisfaction.</p>
+	                        </div>
+				            <div class="about-p">
+			                    <div style="width: 48%; height: 70px; float: left; background-repeat: no-repeat; background-size: auto 70px; background-position: center center; background-image:url('./img/FFB.png')"></div>
+			                    <div style="width: 48%; height: 70px; float: left; background-repeat: no-repeat; background-size: auto 70px; background-position: center center; background-image:url('./img/qualibat.png')"></div>
+			                    <div class="clear"></div>
+				                <br/>            
+                                <p class="para">Nos <span class="bold">devis gratuits</span> ne se font qu'après visite préalable, et vous sont adressés ou présentés <span class="bold">dans les 48h00</span>.</p>
+	                        </div>
+                        </div>-->
+                        <div class="about">
+                            <div class="cont-grid-img img_style">
+	                            <a href="javascript:void(0);"><img src="img/accueil.jpg" alt="" style="width: 100%;" /></a>
+	                            <div style="margin-top: 20px;">
+	                                <div style="width: 48%; height: 70px; float: left; background-repeat: no-repeat; background-size: auto 70px; background-position: center center; background-image:url('./img/FFB.png')"></div>
+			                        <div style="width: 48%; height: 70px; float: left; background-repeat: no-repeat; background-size: auto 70px; background-position: center center; cursor: pointer; background-image:url('./img/qualibat.png')" onclick="javascript:window.open('https://drive.google.com/file/d/0B_Nwv5-Ms-NwQVM5OGx2YmgtdXM/edit?usp=sharing', '_blank');"></div>
+			                        <div class="clear"></div>
+				                </div>
+                            </div>
+                            <div class="cont-grid">
+                                <div class="abt-para" style="text-align: justify;">
+                                    <p class="para">La société <span class="bold">TOP TOITURES</span>, créée en <span class="bold">1989</span>, est située à COUDEKERQUE.</p>
+                        			<p class="para">Composée d’une dizaine de professionnels, jeunes qualifiés ou expérimentés, TOP TOITURES s’adresse aux <span class="bold">particuliers</span> comme aux <span class="bold">collectivités et bailleurs</span> pour des travaux de <span class="bold">réhabilitation</span> et de <span class="bold">rénovation</span>.</p>
+                        			<p class="para">D’une tuile à remettre en place, à la réfection complète d’une église, la même attention est apportée afin de vous <span class="bold">satisfaire</span>.</p>
+                        		    <p class="para">Une entreprise à dimensions <span class="bold">humaines</span> qui réalise tous vos souhaits.</p>
+    							    <p class="para">Nos compagnons exercent leur métier dans les <span class="bold">règles de l’art</span>. Ils sont formés aux dernières technologies et emploient toujours le matériel le plus adapté, afin de répondre au mieux à tous vos besoins !</p>
+    			                    <p class="para">Nous intervenons prioritairement dans un rayon de 30 km autour de la <span class="bold">Communauté Urbaine de DUNKERQUE</span>.</p>
+    	    						<p class="para"><span class="bold">Réactivité</span> et <span class="bold">professionnalisme</span>, <span class="bold">garantie décennale</span> sur tous les travaux, et label <span class="bold">Qualibat</span> sont les garants de votre entière satisfaction.</p>
+    			                    <p class="para">Nos <span class="bold">devis gratuits</span> ne se font qu'après visite préalable, et vous sont adressés ou présentés <span class="bold">dans les 48h00</span>.</p>
+                                </div>
+	                        </div>
+                        </div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bg">
+			<div class="wrap">
+				<div class="wrapper">
+					<div class="footer">
+						<div class="copy">
+							<p class="w3_link">© Top Toitures Dunkerque | 2013 - 2014</p>
+						</div>
+						<div class="social-icons">
+					   		  	
+					   	 </div>		
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            /*(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');*/
+        </script>
+    </body>
 </html>
