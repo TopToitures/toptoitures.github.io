@@ -122,16 +122,11 @@
 				                                        email = $.trim($("#userEmail").val()), 
 				                                        message = $.trim($("#userMsg").val());
 			                                        if (name !== "" && email !== "" && message !== "") {
-			                                            //var url = "https://nodetest-c9-thomassloboda.c9.io/toptoitures/" + encodeURIComponent(name) + "/" + encodeURIComponent(email) + "/" + encodeURIComponent(message);
-			                                            var url = "http://sloboda.fr/mail/send.aspx?n=" + encodeURIComponent(name) + "&e=" + encodeURIComponent(email) + "&m=" + encodeURIComponent(message);
-			                                            $.ajax({
-			                                                type: "GET",
-			                                                url: url,
-			                                                contentType: "application/json",
-			                                                success: function() {
+			                                            $.get("http://sloboda.fr/mail/Service.svc/Mail?name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&message=" + encodeURIComponent(message), function(i) { 
+			                                                if (i.d === "OK") {
 			                                                    window.location = window.location;
-			                                                }
-			                                            })
+			                                                }    
+		                                                });
 			                                        }
 						                           
 						                        });

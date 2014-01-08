@@ -739,7 +739,7 @@ p.date span.author:hover{
 		width:95%;
 	}
 	.nav li {
-		width: 23.88888%;
+		width: 24.5555%;
 	}
 }
 @media only screen and (max-width: 1280px) {
@@ -750,7 +750,7 @@ p.date span.author:hover{
 		width: 40.333333%;
 	}
 	.nav li {
-		width: 22.88888%;
+		width: 24.5555%;
 	}
 }
 @media only screen and (max-width: 1024px) {
@@ -758,7 +758,7 @@ p.date span.author:hover{
 		width:95%;
 	}
 	.nav li {
-		width: 23.88888%;
+		width: 24.5555%;
 	}
 	.nav li a {
 		padding: 10px;
