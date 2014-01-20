@@ -118,11 +118,11 @@
 						                <script type="text/javascript">
 						                    $(document).ready(function() {
 						                        $("#sendMail").click(function() {
-						                            var name = $.trim($("#userName").val()), 
-				                                        email = $.trim($("#userEmail").val()), 
-				                                        message = $.trim($("#userMsg").val());
+						                            var name = encodeURIComponent($.trim($("#userName").val())), 
+				                                        email = encodeURIComponent($.trim($("#userEmail").val())), 
+				                                        message = encodeURIComponent($.trim($("#userMsg").val()));
 			                                        if (name !== "" && email !== "" && message !== "") {
-			                                            $.get("http://sloboda.fr/mail/Service.svc/Mail?name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&message=" + encodeURIComponent(message), function(i) { 
+			                                            $.get("http://sloboda.fr/mail/Service.svc/Mail?name=" + name + "&email=" + email + "&message=" + message, function(i) { 
 			                                                if (i.d === "OK") {
 			                                                    window.location = window.location;
 			                                                }    
